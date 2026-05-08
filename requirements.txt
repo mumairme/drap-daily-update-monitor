@@ -1,0 +1,3 @@
+scrapling[fetchers]
+python-docx
+reportlab

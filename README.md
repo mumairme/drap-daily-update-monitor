@@ -1,8 +1,8 @@
-# DRAP Daily Update Monitor
+# Website Data Scraping Monitor
 
-A Python monitoring tool for tracking public updates from the Drug Regulatory Authority of Pakistan (DRAP) website.
+A Python web monitoring and data scraping tool for tracking public website updates and turning discovered content into structured reports.
 
-The script checks configured public DRAP pages, discovers relevant internal links and documents, classifies updates by keyword, and generates daily machine-readable and human-readable reports.
+This version is configured around public DRAP website pages as an example target. The same structure can be adapted for other public websites by changing the URLs, allowed domains, keywords, and reporting settings in `config.json`.
 
 ## Features
 
@@ -26,7 +26,7 @@ The script checks configured public DRAP pages, discovers relevant internal link
 ## Project Structure
 
 ```text
-drap-daily-update-monitor/
+website-data-scraping-monitor/
   drap_monitor.py
   config.example.json
   requirements.txt

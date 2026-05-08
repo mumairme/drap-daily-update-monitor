@@ -1,0 +1,22 @@
+# Local environment
+.venv/
+venv/
+env/
+
+# Generated output
+data/
+reports/
+.cache/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local config
+config.json
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

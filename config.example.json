@@ -1,0 +1,136 @@
+{
+  "project_name": "DRAP Daily Update Monitor",
+  "start_urls": [
+    "https://www.dra.gov.pk/"
+  ],
+  "allowed_domains": [
+    "dra.gov.pk",
+    "www.dra.gov.pk"
+  ],
+  "fetch_mode": "fetcher",
+  "wordpress_api": {
+    "enabled": true,
+    "content_types": [
+      "posts",
+      "pages"
+    ],
+    "per_page": 100
+  },
+  "robots_txt_obey": true,
+  "request_delay_seconds": 1,
+  "development_cache": true,
+  "crawl_site": true,
+  "max_pages_per_run": 500,
+  "report_scope": "new_only",
+  "report_text_chars": 1000,
+  "record_all_internal_links": true,
+  "crawl_file_extensions": [
+    ".html",
+    ".htm",
+    ".php",
+    ".aspx"
+  ],
+  "record_file_extensions": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".xls",
+    ".xlsx",
+    ".csv",
+    ".zip"
+  ],
+  "output_formats": [
+    "json",
+    "csv",
+    "docx",
+    "pdf"
+  ],
+  "selector_strategy": {
+    "smart_element_tracking": true,
+    "flexible_selection": true,
+    "title_keywords": [
+      "notice",
+      "notification",
+      "news",
+      "recall",
+      "alert",
+      "registration",
+      "public",
+      "drug",
+      "medical",
+      "device",
+      "guideline",
+      "sro",
+      "import",
+      "export",
+      "pricing",
+      "licensing",
+      "quality"
+    ],
+    "url_keywords": [
+      "notice",
+      "notification",
+      "news",
+      "recall",
+      "alert",
+      "registration",
+      "public",
+      "uploads",
+      "download",
+      "pdf"
+    ],
+    "regex_patterns": [
+      "(?i)recall",
+      "(?i)notification",
+      "(?i)public\\s+notice",
+      "(?i)registration",
+      "(?i)medical\\s+device",
+      "(?i)drug\\s+alert"
+    ]
+  },
+  "classification": {
+    "bad": [
+      "recall",
+      "alert",
+      "warning",
+      "suspend",
+      "suspension",
+      "ban",
+      "cancel",
+      "cancelled",
+      "spurious",
+      "substandard",
+      "adulterated",
+      "quality defect",
+      "unsafe",
+      "seized"
+    ],
+    "good": [
+      "approval",
+      "approved",
+      "registration",
+      "registered",
+      "guideline",
+      "facilitation",
+      "launch",
+      "online",
+      "portal",
+      "extension",
+      "training",
+      "workshop"
+    ]
+  },
+  "blocked_detection": {
+    "enabled": true,
+    "policy": "record_and_stop",
+    "markers": [
+      "turnstile",
+      "cloudflare",
+      "verify you are human",
+      "access denied",
+      "blocked",
+      "unusual traffic",
+      "checking your browser"
+    ]
+  }
+}

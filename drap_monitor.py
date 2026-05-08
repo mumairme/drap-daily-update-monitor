@@ -784,7 +784,7 @@ def run() -> int:
         for link in links:
             if not domain_allowed(link["url"], config.get("allowed_domains", [])):
                 continue
-            if should_crawl_url(link["url"]) and link["url"] not in queued and link["url"] not in visited:
+            if should_crawl_url(link["url"], config) and link["url"] not in queued and link["url"] not in visited:
                 queue.append(link["url"])
                 queued.add(link["url"])
 
